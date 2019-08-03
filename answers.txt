@@ -1,0 +1,15 @@
+- Mention two parts of Express that you learned about this week.
+  I learned about middleware and async/await, before when I had experimented with Express and NodeJS,
+  my code kept repeating itself since I didn't know about them, but using these two new things that I learned,
+  it is much more convenient.
+
+- Describe Middleware?
+  Middleware is basically a bridge that connects city A (a database) to city B (an application)
+
+- Describe a Resource?
+
+- What can the API return to help clients know if a request was successful?
+  An alert message or a console log.
+
+- How can we partition our application into sub-applications?
+  Taking a big hard problem and breaking it down to simple small problems that when put together, fix the big problem.
