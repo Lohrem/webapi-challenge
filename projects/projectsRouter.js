@@ -1,7 +1,8 @@
 const express = require('express')
-const Projects = require('../data/helpers/projectModel')
+const Projects = require('../data/helpers/projectModel.js')
 const router = express.Router()
 
+// working
 router.post('/', async (req, res) => {
   try {
     const project = await Projects.insert(req.body)
@@ -13,10 +14,10 @@ router.post('/', async (req, res) => {
     })
   }
 })
-
+// working
 router.get('/', async (req, res) => {
   try {
-    const projects = await Projects.get(req.query)
+    const projects = await Projects.get()
     res.status(200).json(projects)
   } catch (err) {
     console.log(err)
@@ -25,7 +26,7 @@ router.get('/', async (req, res) => {
     })
   }
 })
-
+// sorta working
 router.get('/:id', async (req, res) => {
   try {
     const project = await Projects.getProjectActions(req.params.id)
@@ -43,7 +44,7 @@ router.get('/:id', async (req, res) => {
     })
   }
 })
-
+// working
 router.delete('/:id', async (req, res) => {
   try {
     const count = await Projects.remove(req.params.id)
@@ -63,7 +64,7 @@ router.delete('/:id', async (req, res) => {
     })
   }
 })
-
+// working
 router.put('/:id', async (req, res) => {
   try {
     const project = await Projects.update(req.params.id, req.body)
